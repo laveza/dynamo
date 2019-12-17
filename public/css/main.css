@@ -1,0 +1,166 @@
+@font-face {
+      font-family: 'Product Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Product Sans", Arial;
+      text-decoration: none;
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.877);
+}
+
+.__container {
+      height: calc(100vh - 20px);
+}
+
+.__header {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to bottom,
+                  #1565c0,
+                  #03a9f4,
+                  #00bcd4);
+}
+
+/* seccion navegacion */
+.__navegacion {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 50px;
+      /* background: #ffffff; */
+}
+
+.__navegacion.fixed {
+      position: fixed;
+      width: 100%;
+}
+
+.__logo {
+      flex: 0 1 20%;
+      align-self: center;
+}
+
+.__menu {
+      flex: 0 1 80%;
+      align-self: center;
+      display: none;
+}
+
+.__menu ul {
+      display: flex;
+      justify-content: flex-end;
+}
+
+.__menu ul li {
+      padding: 10px 40px;
+      list-style: none;
+}
+
+.__menu ul li a,
+h1 a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #FFFFFF;
+}
+
+.__responsive__menu-btn {
+      align-self: center;
+      color: #FFFFFF;
+}
+
+.__banner {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+
+.__textos {
+      text-align: center;
+      align-self: flex-end;
+}
+
+.__imagen img {
+      max-width: 90%;
+      height: 300px;
+}
+
+.__imagen {
+      text-align: center;
+}
+
+/* subir arriba */
+.__subir {
+      display: none;
+      position: fixed;
+      padding: 10px;
+      background: #2A2B5F;
+      font-size: 18px;
+      color: #FFFFFF;
+      border-radius: 10%;
+      bottom: 0px;
+      left: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+}
+
+/* media querys */
+@media screen and (min-width:768px) {
+      .__responsive__menu-btn {
+            display: none;
+      }
+
+      .__menu {
+            display: block;
+      }
+
+      .__textos {
+            align-self: center;
+      }
+
+      .__banner {
+            flex-wrap: nowrap;
+      }
+
+}
+
+/* ESTILOS PARA CUANDO SE AGA SCROLL */
+.text-blue {
+      color: #2A2B5F !important;
+      font-weight: bold;
+}
+.text-white{
+      color: #FFFFFF!important;
+      font-weight: bold;
+}
+.__nav-scroll {
+      background: #FFFFFF;
+      transition: ease-out 1s;
+}
+
+.__nav-scroll-remove {
+      background: none;
+      transition: ease 1s;
+}
+
+.__subir_scroll {
+      display: block;
+      transition: ease-in 2s;
+}
+
+.__subir_none_scroll {
+      display: none;
+      transition: ease-in 2s;
+}
